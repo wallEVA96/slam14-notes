@@ -1,0 +1,1 @@
+/usr/bin/cc     CMakeFiles/sayhello.dir/useHello.c.o  -o sayhello libhello.so -Wl,-rpath,/home/exbot/deep-blue/works/1/1-code/build 

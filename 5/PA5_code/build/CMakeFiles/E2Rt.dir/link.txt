@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/E2Rt.dir/E2Rt.cpp.o  -o E2Rt -rdynamic /home/exbot/Sophus/build/libSophus.so -Wl,-rpath,/home/exbot/Sophus/build 

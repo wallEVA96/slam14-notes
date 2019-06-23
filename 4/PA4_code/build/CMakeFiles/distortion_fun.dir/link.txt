@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++11    CMakeFiles/distortion_fun.dir/distortion_fun.cpp.o  -o distortion_fun -rdynamic 

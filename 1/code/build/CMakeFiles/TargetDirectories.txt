@@ -1,0 +1,8 @@
+/home/exbot/deep-blue/works/1/1-code/build/CMakeFiles/edit_cache.dir
+/home/exbot/deep-blue/works/1/1-code/build/CMakeFiles/install/strip.dir
+/home/exbot/deep-blue/works/1/1-code/build/CMakeFiles/rebuild_cache.dir
+/home/exbot/deep-blue/works/1/1-code/build/CMakeFiles/install.dir
+/home/exbot/deep-blue/works/1/1-code/build/CMakeFiles/install/local.dir
+/home/exbot/deep-blue/works/1/1-code/build/CMakeFiles/list_install_components.dir
+/home/exbot/deep-blue/works/1/1-code/build/CMakeFiles/sayhello.dir
+/home/exbot/deep-blue/works/1/1-code/build/CMakeFiles/hello.dir

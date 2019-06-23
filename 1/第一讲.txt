@@ -1,0 +1,43 @@
+--------------0x01--------------
+1   使用命令apt-get进行软件的安装， 处理deb的文件时，可以使用dpkg来处理。
+    通常被安装在 /usr/bin，或者 /usr/share和 /usr/local。
+2   linux的环境变量 指的是系统在运行环境中设置的一些参数，这些参数会被运行的软件所使用，  使用 export进行设定。
+    export PATH=$PATH:/home/walleva
+3   /bin  一般存放可执行的二进制文件
+	/dev  设备文件(linux下，一切皆文件)
+	/etc/rc.d 启动的配置文件和脚本
+	/tmp  临时文件的存放位置
+	/var  各种服务的日志文件
+	/usr/man   用户手册的位置
+4 	chmod -x a.sh
+5   chown xiang:xiang a.sh
+
+--------------0x02-------------
+1 	SLAM 应用到机器人的环境感知， AR以及三维建图
+2 	SLAM 中建图和定位是相辅相成的，定位的时候，首先需要知道自己所处的地图环境，建图的时候，也需要有高精度的坐标定位及姿态。
+3   SLAM的发展历史：
+	该部分的学习主要来自论文： Past, Present, and Future of Simultaneous Localization And Mapping: Towards the Robust-Perception Age
+	1.经典时代从1986到2004,	slam主要依赖于概率论的研究，包括基于扩展卡尔曼滤波器，粒子滤波器，最大似然估计等等
+	2 算法分析时代是从2004到2015, 算法分析周期地研究了slam的基本性质，包括可观测性，收敛性和一致性，对高效slam求解器的稀疏性也被理解，开发了主要的开源slam库，主要包括如下：
+		2006年，概率论中方法与数据之间的联系。
+		2008年，滤波的方法以及视觉slam的方案。
+		2011年，slam的后端的研究,以及可观测性，一致性，收敛性的研究。
+		2012年，视觉里程计的设计和研究。
+		2016年，多机器人slam的研究以及视觉位置的识别。
+	3 2016到之后， 正是步入稳健感知的时代， 越来越多的开源代码和软件，可能更多地和深度学习的理论结合，以及利用更为新颖的slam传感器。
+		
+4   经典文献的话：
+	1	Davison A J, Reid I D, Molton N D, et al. MonoSLAM: real-time single camera SLAM[J]. IEEE Trans Pattern Anal Mach Intell, 2007, 29(6):1052-1067.
+	2	Engel J, Schöps T, Cremers D. LSD-SLAM: Large-Scale Direct Monocular SLAM[J]. 2014, 8690:834-849.
+	3	Mur-Artal R, Montiel J M M, Tardós J D. ORB-SLAM: A Versatile and Accurate Monocular SLAM System[J]. IEEE Transactions on Robotics, 2017, 31(5):1147-1163.
+
+---------------0x03-----
+5   学习ORB-SLAM2
+1	编译后会得到一个关于  libORB_SLAM2.so的库文件。
+2	可执行文件：
+	rgbd_tum，stereo_kitti，stereo_euroc，mono_tum，mono_kitti，mono_euroc
+3	include中主要是相关的头文件， src 是源码，
+	Eamples: 不同相机类型的使用例程。
+	链接到了 五个库， 分别是 opencv，eigen3，pangolin，DBow2, g2o。
+4	修改cmakelist.txt 使用add_executable，target_link_libraries 可以运行老师给的视频， 即可以建图相当方便有意思。
+5	主要的心得体会是，我感觉ORB-SLAM2的真的很强大， 对于初学者，入门操作还算很友善的。 代码编译的时候，特别久， 有必要的时候，还要开辟swap来进行编译。
